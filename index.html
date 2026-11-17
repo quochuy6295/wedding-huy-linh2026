@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Thùy Linh & Quốc Huy</title>
+    <link rel="stylesheet" href="./style.css?v=20.5">
+    <link rel="stylesheet" href="./style2.css?v=20.1">
+    <script src="js.js?v=20.2"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:opsz,wght@6..72,500&family=Noto+Serif+Display&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Lễ Thành Hôn Thùy Linh & Quốc Huy"/>
+    <meta property="og:description" content="Thiệp mời dự Lễ Thành Hôn"/>
+    <meta property="og:image" content="https://wedding-huy-linh.quochuyqlnl1.workers.dev/source/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Thùy Linh & Quốc Huy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wedding-huy-linh.quochuyqlnl1.workers.dev/" />
+    <link rel="icon" href="source/favicon.png" type="image/png">
+
+
+    <link rel="preload" as="image" href="./source/doc/back_thiep.svg" />
+    <link rel="preload" as="audio" href="./source/music.mp3" type="audio/mpeg" />
+    <link rel="preload" as="image" href="./source/doc/cam_anh.svg" />
+    <link rel="preload" as="image" href="./source/doc/xanh_chi.svg" />
+
+
+</head>
+
+
+<audio id="myAudio" autoplay>
+    <source src="./source/music.mp3" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ audio.
+</audio>
+
+
+
+<body>      
+    <canvas id="petalCanvas" aria-hidden="true"></canvas>
+    <div id="audioIndicator">
+        <img src="./source/volume.svg" alt="">
+        
+    </div>
+    <!-- thiệp -->
+    <div class="thiep">
+        <div class="thiep_blur-bg">
+            <div class="thiep_container">
+                <!-- Phần 0 -->
+                <div class="thiep_des">
+                    <p class="font_fancy">Save the Date</p>
+                </div>
+                <!-- Phần 1 -->
+                <div class="thiep_name">
+                    <p class="font_thanh_dam">Thùy Linh</p>
+                    <div class="thiep_heart" role="img" aria-label="và">
+                        <svg viewBox="0 0 24 24" width="38" height="38" aria-hidden="true" focusable="false">
+                            <path fill="#b30a28" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <p class="font_thanh_dam">Quốc Huy</p>
+                </div>
+                <!-- Phần 2 -->
+                <div class="thiep_date_box font_thanh_dam">
+                    <hr class="hr-wrapper">
+                    <div class="thiep_space"></div>
+                    <div class="thiep_date_row">
+                      <div class="thiep_item">
+                        <hr>
+                        <span class="padding_day">THỨ BẢY</span>
+                        <hr>
+                      </div>
+                      <div class="thiep_main_date">28</div>
+                      <div class="thiep_item">
+                        <hr>
+                        <span class="padding_hour">9H00</span>
+                        <hr>
+                      </div>
+                    </div>
+                    <div class="thiep_month_year">11.2026</div>
+                  </div>
+                  
+                <!-- Phần 3 -->
+                <div class="thiep_add">
+                    <p class="font_fancy add_fancy">Địa điểm tổ chức</p>
+                    <p class="font_thanh_dam add_big">GIA ĐÌNH NHÀ GÁI</p>
+                    <p class="font_thanh_dam add_small">Số 80 - Đường Thu Thuận </p>
+                    <p class="font_thanh_dam add_small">Xã Đan Phượng - TP.Hà Nội </p>
+                    <hr class="hr-add">
+                </div>
+
+                <!-- phần icon -->
+                <div class="thiep_all_icon">
+                    <a class="thiep_map" href="https://maps.app.goo.gl/WLL2RjBkSPSkD2TB9">
+                        <img src="./source/pin_map_rose.svg" alt="">
+                    </a>
+                </div>
+                    
+                
+            </div>
+
+        </div>
+    
+    </div>
+
+    <div class="gt_container">
+        <div class="gt_des font_montserrat"> Giới thiệu </div>
+        <div class="gt_des2 font_thanh_dam"> Cô Dâu và Chú Rể </div>
+        <div class="gt_img">
+            <img src="./source/anhbia1.svg" alt="">
+            <!-- <p class="caption font_thanh_dam">Quốc Huy</p> -->
+        </div>
+        <div class="gt_img">
+            <img src="./source/anhbia2.svg" alt="">
+            <!-- <p class="caption font_thanh_dam">Thùy Linh</p> -->
+        </div>
+
+    </div>
+
+
+    <!-- Mời -->
+    <div class="moi_container">
+        <div class="moi_desc1 font_fancy">Thư mời</div>
+        <div class="moi_desc2 font_tnr">Tham dự Lễ cưới của Thùy Linh & Quốc Huy</div>
+        <div class="moi_img">
+            <img class="img_small js_l js_left" src="./source/doc/xanh_1.svg" alt="">
+            <img class="img_big js_center" src="./source/doc/xanh_2.svg" alt="">
+            <img class="img_small js_r js_right" src="./source/doc/xanh_3_lat.svg" alt="">            
+        </div>
+
+        <div class="moi_desc3 font_tnr">   Tình yêu là nguồn sáng soi rọi mọi khoảnh khắc. 
+            Và những khoảnh khắc ấy đã trở thành vĩnh cửu khi chúng tôi quyết định dành 
+            trọn quãng đời còn lại bên nhau. Chúng tôi, bằng cả tấm lòng, xin chân thành 
+            mời bạn đến chung vui trong ngày lễ trọng đại này. Sự hiện diện của bạn sẽ  
+            làm cho ngày vui của chúng tôi càng thêm phần ý nghĩa!</div>
+    </div>
+
+    <!-- confirm -->
+    <div class="cf_container nhay-shadow">
+        <div class="cf_desc1">Lễ Vu Quy</div>
+        <div class="cf_desc2">Thứ Bảy | 9h00</div>
+        <div class="cf_desc3">28.11.2026</div>
+        <div class="cf_desc4">(Tức Ngày 20 Tháng 10 năm Bính Ngọ)</div>
+        <button class="cf_btn js_rsvp font_tnr" type="button">
+            Xác nhận tham dự
+        </button>
+        <button class="cf_btn js_qr font_tnr">
+            Gửi quà mừng
+        </button>
+    </div>
+    
+    <!-- pop-up -->
+    <div class="popup">
+        <div class="popup_container hide-horizontal-scrollbar">
+            <div class="popup_item popup_item1">
+                <!-- qr ảnh -->
+                <img src="./source/ngang/qrvk.svg" alt="">
+                <div class="copy copy_anh" data-copy="107877815585"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup xác nhận tham dự -->
+    <div class="rsvp" id="rsvpPopup" aria-hidden="true">
+        <div class="rsvp_card" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+            <button class="rsvp_close" type="button" aria-label="Đóng">&times;</button>
+
+            <div class="rsvp_head">
+                <p class="font_fancy rsvp_fancy" id="rsvpTitle">Xác nhận tham dự</p>
+                <p class="rsvp_sub">Bạn vui lòng để lại thông tin để chúng tôi chuẩn bị đón tiếp thật chu đáo</p>
+            </div>
+
+            <form class="rsvp_form" id="rsvpForm" novalidate>
+                <label class="rsvp_label" for="rsvpName">Họ và tên</label>
+                <input class="rsvp_input" id="rsvpName" name="name" type="text"
+                       placeholder="Nguyễn Văn A" autocomplete="name" required>
+
+                <span class="rsvp_label">Bạn sẽ đến chung vui?</span>
+                <div class="rsvp_choices">
+                    <label class="rsvp_choice">
+                        <input type="radio" name="attend" value="yes" checked>
+                        <span>Sẽ đến</span>
+                    </label>
+                    <label class="rsvp_choice">
+                        <input type="radio" name="attend" value="no">
+                        <span>Rất tiếc, không đến được</span>
+                    </label>
+                </div>
+
+                <div id="rsvpGuests">
+                    <label class="rsvp_label" for="rsvpCount">Số người tham dự (kể cả bạn)</label>
+                    <select class="rsvp_input" id="rsvpCount" name="count">
+                        <option value="1">1 người</option>
+                        <option value="2">2 người</option>
+                        <option value="3">3 người</option>
+                        <option value="4">4 người</option>
+                        <option value="5">5 người</option>
+                        <option value="6">Trên 5 người</option>
+                    </select>
+                </div>
+
+                <label class="rsvp_label" for="rsvpMessage">Lời nhắn (không bắt buộc)</label>
+                <textarea class="rsvp_input rsvp_textarea" id="rsvpMessage" name="message" rows="3"
+                          placeholder="Chúc mừng hạnh phúc!"></textarea>
+
+                <p class="rsvp_error" id="rsvpError" role="alert"></p>
+
+                <button class="rsvp_submit font_tnr" type="submit">Gửi xác nhận</button>
+            </form>
+
+            <div class="rsvp_done" id="rsvpDone" hidden>
+                <div class="rsvp_check" aria-hidden="true">&#10003;</div>
+                <p class="rsvp_done_title">Cảm ơn bạn!</p>
+                <p class="rsvp_done_text" id="rsvpDoneText"></p>
+                <button class="rsvp_submit font_tnr" type="button" id="rsvpDoneClose">Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- album -->
+    <div id="copy-toast">Đã copy!</div>
+
+    <div class="album_header">
+        <span>Album ảnh cưới</span>
+        <div class="line"></div>
+    </div>
+    <div class="album_container">
+        <img class="js_album album_left" src="./source/ngang/ngang1.svg" alt="">
+        <img class="js_album album_left" src="./source/doc/doc1.svg" alt="">
+        <img class="js_album album_left" src="./source/doc/doc2.svg" alt="">
+        <img class="js_album album_left" src="./source/ngang/ngang2.svg" alt="">
+        <img class="js_album album_left" src="./source/doc/doc3.svg" alt="">
+        <img class="js_album album_left" src="./source/doc/doc4.svg" alt="">
+        <img class="js_album album_right" src="./source/doc/doc5.svg" alt="">
+        <img class="js_album album_right" src="./source/doc/doc6.svg" alt="">
+        <img class="js_album album_right" src="./source/ngang/ngang3.svg" alt=""> 
+        <img class="js_album album_right" src="./source/doc/doc7.svg" alt="">
+        <img class="js_album album_right" src="./source/doc/doc8.svg" alt="">
+        <!-- <img class="js_album album_right" src="./source/doc/cam_5.svg" alt=""> -->
+        <img class="js_album album_right" src="./source/ngang/ngang4.svg" alt="">
+        
+    </div>
+
+    <!-- Thanks -->
+    <div class="thank_container">
+        
+        <div class="thank_desc">
+            <img src="./source/thank.svg" alt="">
+            <p>Rất hân hạnh được đón tiếp!</p>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.thiep_item');
+    const container = document.querySelector('.thiep_date_box');
+    if (items.length === 2 && container) {
+      const left = items[0].getBoundingClientRect().left;
+      const right = items[1].getBoundingClientRect().right;
+      const containerLeft = container.getBoundingClientRect().left;
+      const width = right - left;
+
+      const hr = document.querySelector('.hr-wrapper');
+      hr.style.width = width + 'px';
+      hr.style.left = (left - containerLeft) + 'px';
+      hr.style.transform = 'none';
+
+      const hr_add = document.querySelector('.hr-add');
+      hr_add.style.width = width + 'px';
+      hr_add.style.left = (left - containerLeft) + 'px';
+      hr_add.style.transform = 'none';
+      }
+    });
+
+    const btn_qr = document.querySelector('.js_qr')
+    const pop_up = document.querySelector('.popup')
+    const pop_up_ctn = document.querySelector('.popup_container')
+    const pop_up_item1 = document.querySelector('.popup_item1')
+    const pop_up_item2 = document.querySelector('.popup_item2')
+
+    function show_pop_up() {
+        pop_up.classList.add('show')
+    }
+
+    function hide_pop_up() {
+        pop_up.classList.remove('show')
+    }
+
+    btn_qr.addEventListener('click', show_pop_up)
+    pop_up.addEventListener('click', hide_pop_up)
+    if (pop_up_item1) {
+        pop_up_item1.addEventListener('click', function(event) {
+            event.stopPropagation();
+        })
+    }
+    if (pop_up_item2) {
+        pop_up_item2.addEventListener('click', function(event) {
+            event.stopPropagation();
+        })
+    }
+
+
+    // xử lý kích thước pop up
+    const items = document.querySelectorAll('.popup_item');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const ratio = entry.intersectionRatio; // 0 -> 1
+            const value = 0.8 + 0.2 * ratio; // map từ 0.5 -> 1
+            entry.target.style.opacity = value.toFixed(2);
+            entry.target.style.transform = `scale(${value.toFixed(2)})`;
+        });
+    }, {
+        root: document.querySelector('.popup_container'),
+        threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+    });
+
+    items.forEach(item => observer.observe(item));
+
+
+    // copyyyyyyyyyyy
+    function showToast() {
+        const toast = document.getElementById('copy-toast');
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 1000);   
+    }
+
+    document.querySelectorAll('.copy').forEach(copyBtn => {
+        copyBtn.addEventListener('click', function () {
+            const text = this.dataset.copy;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast();
+            console.log(`Đã copy: ${text}`);
+            }).catch(err => {
+            console.error('Copy thất bại: ', err);
+            });
+        });
+    });
+
+
+    // ===== popup xác nhận tham dự =====
+    // Hiện chưa gửi dữ liệu đi đâu: chỉ lưu trên máy người xem (localStorage).
+    // Khi cần gửi về Google Sheet / email, thêm bước gửi vào chỗ đánh dấu bên dưới.
+    (function () {
+        const popup = document.getElementById('rsvpPopup');
+        if (!popup) return;
+
+        const form = document.getElementById('rsvpForm');
+        const done = document.getElementById('rsvpDone');
+        const doneText = document.getElementById('rsvpDoneText');
+        const nameInput = document.getElementById('rsvpName');
+        const countSelect = document.getElementById('rsvpCount');
+        const guestBox = document.getElementById('rsvpGuests');
+        const messageInput = document.getElementById('rsvpMessage');
+        const errorBox = document.getElementById('rsvpError');
+        const openBtn = document.querySelector('.js_rsvp');
+        const closeBtn = popup.querySelector('.rsvp_close');
+        const doneClose = document.getElementById('rsvpDoneClose');
+        const RSVP_KEY = 'rsvpConfirmations';
+        let lastFocus = null;
+
+        // ẩn/hiện ô số người theo lựa chọn tham dự
+        function syncGuests() {
+            const attend = form.querySelector('input[name="attend"]:checked');
+            const yes = !attend || attend.value === 'yes';
+            guestBox.hidden = !yes;
+            countSelect.disabled = !yes;
+        }
+
+        function reset() {
+            form.reset();
+            errorBox.textContent = '';
+            form.hidden = false;
+            done.hidden = true;
+            syncGuests();
+        }
+
+        function open() {
+            lastFocus = document.activeElement;
+            reset();
+            popup.classList.add('show');
+            popup.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => nameInput.focus(), 250);
+        }
+
+        function close() {
+            popup.classList.remove('show');
+            popup.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+        }
+
+        if (openBtn) openBtn.addEventListener('click', open);
+        closeBtn.addEventListener('click', close);
+        doneClose.addEventListener('click', close);
+        popup.addEventListener('click', (event) => {
+            if (event.target === popup) close();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && popup.classList.contains('show')) close();
+        });
+        form.querySelectorAll('input[name="attend"]').forEach((radio) => {
+            radio.addEventListener('change', syncGuests);
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = nameInput.value.trim();
+            if (name.length < 2) {
+                errorBox.textContent = 'Bạn vui lòng nhập họ tên.';
+                nameInput.focus();
+                return;
+            }
+            errorBox.textContent = '';
+
+            const attendInput = form.querySelector('input[name="attend"]:checked');
+            const attend = attendInput ? attendInput.value : 'yes';
+            const record = {
+                name: name,
+                attend: attend,
+                guests: attend === 'yes' ? countSelect.value : 0,
+                message: messageInput.value.trim(),
+                at: new Date().toISOString(),
+            };
+
+            try {
+                const saved = JSON.parse(localStorage.getItem(RSVP_KEY) || '[]');
+                saved.push(record);
+                localStorage.setItem(RSVP_KEY, JSON.stringify(saved));
+            } catch (err) {
+                console.warn('Không lưu được xác nhận trên máy:', err);
+            }
+
+            // TODO: nếu cần gửi về Google Sheet / email thì gọi fetch(ENDPOINT, ...) tại đây.
+
+            doneText.textContent = attend === 'yes'
+                ? `${name} ơi, cảm ơn bạn đã xác nhận! Hẹn gặp bạn lúc 9h00 ngày 28.11.2026.`
+                : `${name} ơi, cảm ơn bạn đã phản hồi. Rất tiếc vì bạn không thể đến chung vui, chúng tôi sẽ gửi bạn chút kỷ niệm sau ngày vui nhé!`;
+
+            form.hidden = true;
+            done.hidden = false;
+        });
+    })();
+
+
+
+
+</script>
+  

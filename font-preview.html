@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>So sánh font tên cô dâu chú rể</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Arizonia&family=Corinthia&family=Cormorant+Garamond:ital,wght@1,500&family=Dancing+Script:wght@600&family=Ephesis&family=Great+Vibes&family=Italianno&family=Montserrat:wght@400;600&family=Noto+Serif+Display&family=Playball&family=Playfair+Display:ital,wght@1,500&family=Pinyon+Script&family=Qwigley&family=Style+Script&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #141414;
+    --heart: #b30a28;
+    --pink: #a4526b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 64px;
+    font-family: "Montserrat", sans-serif;
+    color: #5b2b3b;
+    background-color: #fff4f8;
+    background-image:
+      radial-gradient(900px 600px at 10% -10%, #ffe9f1 0%, rgba(255,233,241,0) 60%),
+      linear-gradient(180deg, #fff7fa 0%, #fbdfe9 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 6px;
+    letter-spacing: .02em;
+  }
+  .sub {
+    text-align: center;
+    font-size: 13px;
+    color: #9a5468;
+    margin: 0 0 28px;
+    line-height: 1.6;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid #f3d3de;
+    border-radius: 16px;
+    padding: 18px 16px 20px;
+    box-shadow: 0 6px 20px rgba(214, 140, 164, .16);
+    text-align: center;
+  }
+  .card .name {
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--pink);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .sample {
+    color: var(--ink);
+    line-height: 1.05;
+  }
+  .sample .n { font-size: 40px; }
+  .sample .amp {
+    display: block;
+    font-size: 26px;
+    color: var(--heart);
+    margin: 2px 0;
+  }
+  .note {
+    max-width: 700px;
+    margin: 34px auto 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #8b5560;
+    background: #fff;
+    border: 1px dashed #ecc4d3;
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .note b { color: #6d3547; }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #d98ca6;
+    border-radius: 999px;
+    padding: 2px 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<h1>Chọn font giống ảnh mẫu nhất</h1>
+<p class="sub">
+  Mỗi ô là cùng một nội dung “Quốc Huy – &amp; – Thùy Linh”.<br>
+  Bạn chỉ cần nhắn cho tôi <b>số thứ tự</b> (hoặc tên font) của ô giống ảnh nhất.
+</p>
+
+<div class="grid" id="grid"></div>
+
+<div class="note">
+  <b>Ghi chú:</b> ảnh bạn gửi là một mẫu thiết kế nhỏ nên tôi không đọc được chính xác tên font.
+  Nếu bạn biết tên font (hoặc biết thiết kế đó lấy từ Canva / trang thiệp nào) thì nhắn tôi tên đó,
+  tôi sẽ gắn đúng font ngay. Còn nếu không, chọn ô gần giống nhất là được.
+</div>
+
+<script>
+  const FONTS = [
+    ["Alex Brush", "'Alex Brush', cursive", "đang dùng cho chữ Save the Date"],
+    ["Great Vibes", "'Great Vibes', cursive", ""],
+    ["Pinyon Script", "'Pinyon Script', cursive", ""],
+    ["Italianno", "'Italianno', cursive", ""],
+    ["Allura", "'Allura', cursive", ""],
+    ["Arizonia", "'Arizonia', cursive", ""],
+    ["Playball", "'Playball', cursive", ""],
+    ["Style Script", "'Style Script', cursive", ""],
+    ["Ephesis", "'Ephesis', cursive", ""],
+    ["Corinthia", "'Corinthia', cursive", ""],
+    ["Qwigley", "'Qwigley', cursive", ""],
+    ["Dancing Script", "'Dancing Script', cursive", ""],
+    ["Cormorant Garamond Italic", "'Cormorant Garamond', serif", "kiểu chữ in nghiêng thanh mảnh"],
+    ["Playfair Display Italic", "'Playfair Display', serif", "kiểu chữ in nghiêng thanh mảnh"],
+    ["Noto Serif Display", "'Noto Serif Display', serif", "font đang dùng hiện tại"]
+  ];
+
+  const grid = document.getElementById("grid");
+  FONTS.forEach(([label, family, note], i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML =
+      '<div class="name">' + (i + 1) + ". " + label +
+        (note ? '<span class="tag">' + note + "</span>" : "") + "</div>" +
+      '<div class="sample" style="font-family:' + family + '">' +
+        '<span class="n">Quốc Huy</span>' +
+        '<span class="amp">&</span>' +
+        '<span class="n">Thùy Linh</span>' +
+      "</div>";
+    grid.appendChild(card);
+  });
+</script>
+
+</body>
+</html>

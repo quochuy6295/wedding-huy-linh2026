@@ -1,0 +1,10 @@
+// Cấu hình Cloudflare Worker (static assets) cho thiệp cưới.
+// Deploy: nối GitHub repo với Cloudflare Workers (Connect to Git),
+// build command để trống, deploy command: npx wrangler deploy
+{
+  "name": "wedding-huy-linh",
+  "compatibility_date": "2026-11-17",
+  "assets": {
+    "directory": "."
+  }
+}

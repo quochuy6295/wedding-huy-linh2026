@@ -1,0 +1,6 @@
+.git
+.gitattributes
+.assetsignore
+README.md
+font-preview.html
+wrangler.jsonc
